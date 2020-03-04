@@ -358,6 +358,7 @@ class LSClient(object):
                 # A complete implementation should create a new session
                 # and re-subscribe to all the old items and relative fields.
                 log.error("SYNC ERROR")
+                rebind = True
                 receive = False
             elif message.startswith(END_CMD):
                 # Terminate the receiving loop on END message.
